@@ -1,0 +1,41 @@
+@mixin header($padding: 50px) {
+    margin: 0 auto;
+    padding: $padding;
+}
+
+@mixin list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px 10px;
+    grid-template-areas:
+        "currency buy"
+        "currency sell";
+    align-items: center;
+
+    @media (min-width: 1440px) {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+    }
+
+}
+
+@mixin currency {
+    display: grid;
+    justify-content: center;
+    width: 60px;
+
+
+    &:hover,
+    &:focus {
+        background-color: var(--header-color);
+        border-radius: 10px;
+
+        color: var(--header-background);
+    }
+
+    @media(min-width: 768px) {
+        width: 100px;
+    }
+}

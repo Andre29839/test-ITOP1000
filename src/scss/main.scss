@@ -1,0 +1,61 @@
+@import "./variables/mixins";
+@import "./variables/variables";
+
+@import "../Header/Header";
+@import "../Main//Main";
+
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  overflow: auto;
+  background-color: var(--blue-ligth);
+
+  @keyframes scroll {
+    from {
+      background-position: 0 0;
+    }
+
+    to {
+      background-position: 0 100%;
+    }
+  }
+
+  background-attachment: fixed;
+  background-size: cover;
+  animation: scroll 5s linear infinite alternate;
+}
+
+code {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+p,
+ul,
+ol,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
